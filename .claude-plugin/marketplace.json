@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "Machine Payments Protocol debugging and inspection tools for Claude Code",
-    "version": "0.1.1"
+    "version": "0.1.2"
   },
   "plugins": [
     {
@@ -14,10 +14,10 @@
       "source": {
         "source": "npm",
         "package": "@mpp-inspector/plugin",
-        "version": "0.1.1"
+        "version": "0.1.2"
       },
-      "description": "Inspect, debug, and test Machine Payments Protocol (HTTP 402) endpoints directly from Claude Code",
-      "version": "0.1.1",
+      "description": "Inspect, debug, and test Machine Payments Protocol (HTTP 402) endpoints directly from Claude Code. Adds /mpp-inspect, /mpp-scan, /mpp-flow commands and 5 MCP tools.",
+      "version": "0.1.2",
       "author": {
         "name": "MPP Inspector Contributors"
       },
@@ -26,15 +26,7 @@
       "license": "MIT",
       "keywords": ["mpp", "http-402", "payments", "web3", "tempo", "mcp", "debugging"],
       "category": "web3",
-      "tags": ["payments", "protocol", "blockchain", "api-debugging", "devtools"],
-      "commands": ["./skills/"],
-      "mcpServers": {
-        "mpp-inspector": {
-          "command": "node",
-          "args": ["${CLAUDE_PLUGIN_ROOT}/dist/index.js"]
-        }
-      },
-      "hooks": "./hooks/hooks.json"
+      "tags": ["payments", "protocol", "blockchain", "api-debugging", "devtools"]
     }
   ]
 }
