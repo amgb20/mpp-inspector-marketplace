@@ -11,7 +11,15 @@ Inspect, debug, and test [Machine Payments Protocol](https://mpp.dev) endpoints 
 
 ## What you get
 
-### 5 MCP tools
+### Slash commands
+
+| Command | Description |
+|---------|-------------|
+| `/mpp-inspect <url>` | Parse and verify a 402 challenge from any URL |
+| `/mpp-scan <domain>` | Discover MPP endpoints on a domain |
+| `/mpp-flow <url>` | Dry-run the full payment flow |
+
+### 5 MCP tools (used by the commands above)
 
 | Tool | Description |
 |------|-------------|
@@ -31,7 +39,15 @@ Automatically detects when your project uses MPP-related code and surfaces relev
 
 ## Try it
 
-After installing, ask Claude:
+After installing, use the slash commands:
+
+```
+/mpp-inspect https://mpp.dev/api/ping/paid
+/mpp-scan mpp.dev
+/mpp-flow https://mpp.dev/api/ping/paid
+```
+
+Or ask Claude directly:
 
 - "Inspect the MPP challenge at https://mpp.dev/api/ping/paid"
 - "Scan mpp.dev for MPP endpoints"
