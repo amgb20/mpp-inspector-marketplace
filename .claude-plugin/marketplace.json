@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "Machine Payments Protocol debugging and inspection tools for Claude Code",
-    "version": "0.1.0"
+    "version": "0.1.1"
   },
   "plugins": [
     {
@@ -14,10 +14,10 @@
       "source": {
         "source": "npm",
         "package": "@mpp-inspector/plugin",
-        "version": "0.1.0"
+        "version": "0.1.1"
       },
       "description": "Inspect, debug, and test Machine Payments Protocol (HTTP 402) endpoints directly from Claude Code",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "author": {
         "name": "MPP Inspector Contributors"
       },
