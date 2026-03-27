@@ -1,0 +1,31 @@
+{
+  "name": "mpp-inspector",
+  "owner": {
+    "name": "MPP Inspector Contributors"
+  },
+  "metadata": {
+    "description": "Machine Payments Protocol debugging and inspection tools for AI coding assistants",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "mpp-inspector",
+      "source": {
+        "source": "npm",
+        "package": "@mpp-inspector/plugin",
+        "version": "0.1.0"
+      },
+      "description": "Inspect, debug, and test Machine Payments Protocol (HTTP 402) endpoints directly from your AI coding assistant",
+      "version": "0.1.0",
+      "author": {
+        "name": "MPP Inspector Contributors"
+      },
+      "homepage": "https://github.com/amgb20/MPP-Inspector",
+      "repository": "https://github.com/amgb20/MPP-Inspector",
+      "license": "MIT",
+      "keywords": ["mpp", "http-402", "payments", "web3", "tempo", "mcp", "debugging"],
+      "category": "web3",
+      "tags": ["payments", "protocol", "blockchain", "api-debugging", "devtools"]
+    }
+  ]
+}
