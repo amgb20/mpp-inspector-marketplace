@@ -1,25 +1,39 @@
-# MPP Inspector — Claude Code Plugin Marketplace
+# MPP Inspector — Claude Code Plugin
 
-Inspect, debug, and test [Machine Payments Protocol](https://mpp.dev) endpoints directly from Claude Code.
+> Inspect, debug, and test [Machine Payments Protocol](https://mpp.dev) endpoints directly from Claude Code.
 
-## Install
+MPP Inspector is a Claude Code plugin that gives you and Claude full visibility into HTTP 402 payment challenges, endpoint discovery, pricing comparison, receipt validation, and end-to-end payment flow dry-runs — all without leaving your editor.
+
+## Quick Start
+
+### Install from the Claude Code Marketplace
 
 ```
 /plugin marketplace add amgb20/mpp-inspector-marketplace
 /plugin install mpp-inspector@mpp-inspector
 ```
 
-## What you get
+### Try it immediately
 
-### Slash commands
+```
+/mpp-inspect https://mpp.dev/api/ping/paid
+/mpp-scan mpp.dev
+/mpp-flow https://mpp.dev/api/ping/paid
+```
 
-| Command | Description |
-|---------|-------------|
+## Features
+
+### Slash Commands
+
+| Command | What it does |
+|---------|--------------|
 | `/mpp-inspect <url>` | Parse and verify a 402 challenge from any URL |
-| `/mpp-scan <domain>` | Discover MPP endpoints on a domain |
-| `/mpp-flow <url>` | Dry-run the full payment flow |
+| `/mpp-scan <domain>` | Discover MPP endpoints across a domain |
+| `/mpp-flow <url>` | Dry-run the full payment flow step by step |
 
-### 5 MCP tools (used by the commands above)
+### MCP Tools
+
+Five tools are exposed to Claude so it can reason about MPP autonomously:
 
 | Tool | Description |
 |------|-------------|
@@ -29,43 +43,41 @@ Inspect, debug, and test [Machine Payments Protocol](https://mpp.dev) endpoints 
 | `mpp_validate` | Verify receipts and credentials |
 | `mpp_flow` | Dry-run the full payment flow |
 
-### MPP protocol skill
+### Protocol Skill
 
-A built-in skill that gives Claude deep understanding of the MPP spec including challenge parsing, payment methods (Tempo, Stripe, Lightning, Solana, Card), chain configuration, receipt/credential formats, and debugging patterns.
+A built-in skill gives Claude deep knowledge of the MPP specification — challenge parsing, payment methods (Tempo, Stripe, Lightning, Solana, Card), chain configuration, receipt and credential formats, and common debugging patterns.
 
-### Session hook
+### Session Hook
 
-Automatically detects when your project uses MPP-related code and surfaces relevant context.
+Automatically detects when your project uses MPP-related code and surfaces relevant context at session start.
 
-## Try it
+## Natural Language
 
-After installing, use the slash commands:
+You can also just ask Claude:
 
-```
-/mpp-inspect https://mpp.dev/api/ping/paid
-/mpp-scan mpp.dev
-/mpp-flow https://mpp.dev/api/ping/paid
-```
+- *"Inspect the MPP challenge at https://mpp.dev/api/ping/paid"*
+- *"Scan mpp.dev for MPP endpoints"*
+- *"Run a dry-run payment flow against https://mpp.dev/api/ping/paid"*
+- *"Compare pricing between these two MPP endpoints"*
 
-Or ask Claude directly:
+## Also Available As
 
-- "Inspect the MPP challenge at https://mpp.dev/api/ping/paid"
-- "Scan mpp.dev for MPP endpoints"
-- "Run a dry-run payment flow against https://mpp.dev/api/ping/paid"
-- "Compare pricing between these two MPP endpoints"
-
-## Also available as
-
-- **CLI**: `npx mpp-inspector inspect https://mpp.dev/api/ping/paid`
-- **npm**: `npm install -g mpp-inspector`
-- **MCP server**: `claude mcp add --transport stdio mpp-inspector -- npx @mpp-inspector/plugin`
+| Distribution | Command |
+|-------------|---------|
+| **CLI** | `npx mpp-inspector inspect https://mpp.dev/api/ping/paid` |
+| **Global install** | `npm install -g mpp-inspector` |
+| **Standalone MCP server** | `claude mcp add --transport stdio mpp-inspector -- npx @mpp-inspector/plugin` |
 
 ## Links
 
-- [NPM CLI package](https://www.npmjs.com/package/mpp-inspector)
-- [NPM plugin package](https://www.npmjs.com/package/@mpp-inspector/plugin)
-- [Source code](https://github.com/amgb20/MPP-Inspector)
-- [MPP Protocol docs](https://mpp.dev/overview)
+- **Source code & documentation**: [github.com/amgb20/MPP-Inspector](https://github.com/amgb20/MPP-Inspector)
+- **NPM — CLI package**: [npmjs.com/package/mpp-inspector](https://www.npmjs.com/package/mpp-inspector)
+- **NPM — Plugin package**: [npmjs.com/package/@mpp-inspector/plugin](https://www.npmjs.com/package/@mpp-inspector/plugin)
+- **MPP Protocol docs**: [mpp.dev/overview](https://mpp.dev/overview)
+
+## Contributing
+
+Contributions are welcome! See the [main repository](https://github.com/amgb20/MPP-Inspector) for issues, discussions, and contribution guidelines.
 
 ## License
 
