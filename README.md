@@ -75,6 +75,10 @@ You can also just ask Claude:
 - **NPM — Plugin package**: [npmjs.com/package/@mpp-inspector/plugin](https://www.npmjs.com/package/@mpp-inspector/plugin)
 - **MPP Protocol docs**: [mpp.dev/overview](https://mpp.dev/overview)
 
+## Contributing
+
+Contributions are welcome! See the [main repository](https://github.com/amgb20/MPP-Inspector) for issues, discussions, and contribution guidelines.
+
 ## License
 
 MIT
